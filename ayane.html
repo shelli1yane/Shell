@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked Ayane Chan Arc</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(45deg, #3a8dff, #001f3f, #5c9ffb, #0048ba);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px #000;
+            text-align: center;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .fireflies {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .firefly {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: yellow;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fly 5s ease-in-out infinite, glow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(calc(100vw - 20px), calc(100vh - 20px)); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes glow {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .dragon {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background: linear-gradient(90deg, #e66465, #9198e5);
+            border-radius: 25px;
+            animation: dragonWalk 15s linear infinite;
+            z-index: 0;
+        }
+
+        .dragon::before, .dragon::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: inherit;
+            border-radius: 25px;
+        }
+
+        .dragon::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .dragon::after {
+            top: 25px;
+            left: 50px;
+        }
+
+        @keyframes dragonWalk {
+            0% { transform: translate(-100px, calc(100vh - 50px)); }
+            50% { transform: translate(calc(100vw - 100px), 0); }
+            100% { transform: translate(-100px, calc(100vh - 50px)); }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hacked Ayane Chan Arc</h1>
+    <div class="fireflies">
+        <div class="firefly" style="animation-delay: 0s;"></div>
+        <div class="firefly" style="animation-delay: 1s;"></div>
+        <div class="firefly" style="animation-delay: 2s;"></div>
+        <div class="firefly" style="animation-delay: 3s;"></div>
+        <div class="firefly" style="animation-delay: 4s;"></div>
+    </div>
+    <div class="dragon"></div>
+    <div class="footer">
+        <p>© Ayane Chan Arc</p>
+    </div>
+</body>
+</html>
